@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		checkout scm
+		sh mvn --version
+        checkout scm
             }
         }
         stage('Test') {
